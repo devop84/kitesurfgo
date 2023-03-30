@@ -126,7 +126,7 @@ section.main {
   background-color: #fff;
   border-radius: 5px;
   height:450px;
-
+  box-shadow: #444;
   z-index: -1;
 }
 .grid {
