@@ -60,6 +60,7 @@ body, h1, ul, li, a {
 }
 .menu ul {
   list-style-type: none;
+  margin-left:10px;
 }
 .menu li {
   display: inline-block;
@@ -72,10 +73,9 @@ body, h1, ul, li, a {
   font-size: small;
   padding:10px;
   border-radius: 5px;
-  transition: 0.5s;
 }
 .menu a:hover {
-  background-color: #333;
+  background-color: #444;
 }
 .mobile-menu-icon {
   display: none;
@@ -83,6 +83,9 @@ body, h1, ul, li, a {
 @media all and (max-width: 480px) {
   .menu {
     display: block;
+  }
+  .menu ul {
+    margin:0px;
   }
   .menu-list {
     background-color:#1a1a1a;
