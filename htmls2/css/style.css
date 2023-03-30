@@ -125,8 +125,8 @@ section.main {
 .card {
   background-color: #fff;
   border-radius: 5px;
-  height:400px;
-  max-width: 350px;
+  height:450px;
+
   z-index: -1;
 }
 .grid {
