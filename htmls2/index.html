@@ -27,22 +27,30 @@
         </nav>
       </div>
       <nav class="menu">
-        <div class="mobile-menu-icon">
-          <i class="material-icons">menu</i>
+        <div class="mobile-menu-icon" id="toggle-button"><i class="material-icons">menu</i></div>
+        <div class="menu-list" id="nav-list">
+          <ul>  
+            <li><a href="#">News</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Activities</a></li>
+            <li><a href="#">Transfers</a></li>
+            <li><a href="#">Accomodation</a></li>
+            <li><a href="#" style="color:#E63946;">KITESURF</a></li>
+          </ul>
         </div>
-        <ul>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Destinations</a></li>
-          <li><a href="#">Activities</a></li>
-          <li><a href="#">Transfers</a></li>
-          <li><a href="#">Accomodation</a></li>
-          <li><a href="#" style="color:#E63946;">KITESURF</a></li>
-        </ul>
       </nav>
     </header>
 
 
   </body>
 
+  <script>
+const toggleButton = document.getElementById('toggle-button')
+const navList = document.getElementById('nav-list')
+
+toggleButton.addEventListener('click', () => {
+  navList.classList.toggle('showmenu');
+})
+  </script>
 
 </html>
