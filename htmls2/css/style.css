@@ -15,9 +15,7 @@ body {
 
 .top {
   display: flex;
-  background: linear-gradient(to bottom,var(--background-start-color),var(--background-end-color));
-  --background-start-color: #163333;
-  --background-end-color: #102e4b;
+  background: rgba(0,28,57,1);
   align-items: center;
   height: 70px;
 }
@@ -26,8 +24,13 @@ body {
   flex-grow: 1;
   margin-left:10px;
 }
+.logo img {
+  height:60px;
+  width:60px;
+}
 .logo h1{
   margin-left:10px;
+  color:#DB0A40;
 }
 @media all and (max-width: 300px) {
   .logo h1{
@@ -57,7 +60,7 @@ body {
   transition: 0.5s;
 }
 .search-login li a:hover {
-  color:#E63946;
+  color:#DB0A40;
 }
 
 .menu {
