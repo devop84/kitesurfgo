@@ -1,190 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,300&display=swap');
 * {
   box-sizing: border-box;
-  margin:0px;
+  margin:0;
+  padding:0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
 }
 body {
-  background-color: #1D3557;
-  font-family: Verdana, sans-serif; 
-  margin:0;
-  font-family: 'Cabin', sans-serif;
+  background: #fff;
 }
-
+ul {
+  list-style: none;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
 .top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 70px;
+  padding: 0px 20px;
+  background: rgba(0,28,57,1);
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo h1 {
-  color: #F1FAEE;
-  margin: 0px 10px;
-}
-
-.logo h2 {
-  color: #457B9D;
-  margin: 0px 10px 0px 50px;
-  font-size: 10px;
-  text-align: right;
-  text-transform: uppercase;
-}
-
-nav.login {
+.top div {
   display: flex;
   align-items: center;
 }
-
-nav.login ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav.login li {
-  display: inline-block;
-  margin-right: 20px;
-  vertical-align: middle;
-}
-
-nav.login li a {
+.top a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: #F1FAEE;
-  transition: 0.3s;
+  color: #fff;
 }
-
-nav.login li a:hover {
-  color: #E63946;
-}
-nav.main-menu {
+.top-apps .material-symbols-outlined {
   display: flex;
   align-items: center;
-  background-color: #111;
-  height: 50px;
-
+  justify-content: center;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48;
+  height:36px;
+  width:36px;
+  border: thin solid rgba(255, 255, 255, 0.3);;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.5s;
 }
-nav.main-menu ul {
-  list-style-type: none;
+.top-apps .material-symbols-outlined:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
-
-nav.main-menu li {
-  display: inline-block;
-  margin-right: 20px;
+.top-logo {
+  margin-left:15px;
 }
-nav.main-menu li a {
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 10px;
-  color: #fff;
-  transition: 0.3s;
-  margin: 0px;
-
+.top-logo h1 {
+  margin-left:5px;
+  font-size: x-large;
 }
-
-nav.main-menu li a:hover {
-  color: #fff;
-  background-color: #1D3557;
-  border-radius: 5px;
-  
+.top-logo img {
+  height: 60px;
+  width: 60px;
 }
-
-.popular-items {
-  background-color:rgb(255, 255, 255);
-  padding-bottom: 100px;
-}
-
-.popular-items h1 {
-  padding:5% 5%;
-  color: #1D3557;
-  font-size: 40px;
-  font: bold;
-}
-
-.all-cards {
-  padding:0% 5%;
+.top-nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  padding: 0px 20px;
+  height:36px;
+  border: thin solid rgba(255, 255, 255, 0.3);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
 }
-
-.card {
-  position:relative;
-  text-align: left;
-  border-radius: 5px;
-  outline-offset : 10px;
-  box-sizing:border-box;
-  overflow:hidden;
+.top-nav a {
+  border-radius: 18px;
+  height:0px;
+  margin:0px 20px;
+  transition: 0.2s;
 }
-
-
-@media (min-width: 400px) {
-  .card {
-    width:45%;
-    padding-top:65%;
-    margin-bottom: 20px;
-  }
+.top-nav a:hover {
+  height:36px;
+  padding:0px 20px;
+  margin:0px 0px;
+  background: rgba(255, 255, 255, 0.1);
 }
-@media (min-width: 800px) {
-  .card {
-    width:24%;
-    padding-top:35%;
-  }
+.top-search-account {
+  justify-content: right;
+  gap:18px;
 }
-@media only screen and (max-width: 600px) {
-  .card {
-    width:100%;
-    padding-top:150%;
-    margin-bottom: 20px;
-  }
-}
-.card img {
-  width:100%;height:100%;
-  object-fit: cover;
-  border-radius: 5px;
-  position:absolute;
-  object-position: center;
-  top:0;
-  left:-100%; right:-100%;
-  margin:auto;
-  transform-origin:50% 0;
-  transform:scale(1);
-  transition:transform .3s ease-out;
-  opacity: 0.9;
-}
-
-.card img:hover {
-  transform: scale(1.01);
-  opacity: 1;
-}
-
-.card .label {
-  position: absolute;
-  top:0px;
-  margin:20px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #E63946;
-  color: #F1FAEE;
-  font-size: 12px;
-}
-.card .card-text {
-  position: absolute;
-  bottom: 0px;
-  margin:20px;
-  color: #F1FAEE;
-  text-shadow: 0px 0px 4px #000;
-}
-.card .card-text h1 {
-  color: #F1FAEE;
-  font-size: 18px;
-}
-.card .card-text p {
-  font-size: 12px;
-  text-align: right;
-}
-
