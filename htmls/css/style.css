@@ -24,7 +24,7 @@ ul {
   grid-template-columns: auto auto auto;
   height: 70px;
   padding: 0px 20px;
-  background: rgba(0,28,57,1);
+  background: rgba(0,22,43);
 }
 .top div {
   display: flex;
@@ -37,23 +37,28 @@ ul {
   color: #fff;
 }
 .top-apps .material-symbols-outlined {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 100,
-  'GRAD' 0,
-  'opsz' 48;
-  height:36px;
-  width:36px;
-  border: thin solid rgba(255, 255, 255, 0.3);;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.05);
-  transition: 0.5s;
+  display: none;
 }
-.top-apps .material-symbols-outlined:hover {
-  background: rgba(255, 255, 255, 0.15);
+@media all and (max-width: 650px) {
+  .top-apps .material-symbols-outlined {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 100,
+    'GRAD' 0,
+    'opsz' 48;
+    height:36px;
+    width:36px;
+    border: thin solid rgba(255, 255, 255, 0.3);;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+  }
+  .top-apps .material-symbols-outlined:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
 }
 .top-logo {
   margin-left:15px;
@@ -61,11 +66,13 @@ ul {
 .top-logo h1 {
   margin-left:5px;
   font-size: x-large;
+  color:#DB0A40;
 }
 .top-logo img {
   height: 60px;
   width: 60px;
 }
+
 .top-nav {
   display: flex;
   justify-content: center;
@@ -89,7 +96,47 @@ ul {
   margin:0px 0px;
   background: rgba(255, 255, 255, 0.1);
 }
+
+.mobile-top-nav {
+  display: none;
+}
+@media all and (max-width: 650px) {
+  .top-nav {
+    display: none;
+  }
+  .mobile-top-nav {
+    display: none;
+    background-color: rgba(0,22,43);
+  }
+  .showmenu {
+    display: block;
+  }
+  .mobile-top-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+  }
+  .mobile-top-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
 .top-search-account {
+  display: flex;
   justify-content: right;
-  gap:18px;
+  align-items: center;
+  gap:10px;
+}
+.top-search-account a {
+  border-radius: 18px;
+  margin:6px;
+  padding:0px;
+  transition:0.2s;
+}
+.top-search-account a:hover {
+  margin:0px;
+  padding:6px;
+  background: rgba(255, 255, 255, 0.1);
 }
