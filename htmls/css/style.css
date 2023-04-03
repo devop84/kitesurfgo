@@ -67,6 +67,7 @@ ul {
   margin-left:5px;
   font-size: x-large;
   color:#DB0A40;
+  font-family: 'Poppins', sans-serif;
 }
 .top-logo img {
   height: 60px;
@@ -139,4 +140,19 @@ ul {
   margin:0px;
   padding:6px;
   background: rgba(255, 255, 255, 0.1);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
