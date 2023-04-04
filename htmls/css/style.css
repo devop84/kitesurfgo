@@ -161,6 +161,15 @@ ul {
   background-position: center;
   background-size: cover;
 }
+
+@keyframes zoom-image {
+  from {scale: 1;}
+  to {scale: 1.5;}
+}
+.swiper-slide img {
+  animation-name: zoom-image;
+  animation-duration: 4s;
+}
 .swiper-caption {
   position: absolute;
   bottom:10%;
