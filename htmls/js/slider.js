@@ -17,7 +17,7 @@ setInterval(() => {
   
   // Set the next slide to be active
   slides[currentSlide].classList.add("active");
-}, 5000);
+}, 8000);
 
 // Add touch events to change slide when swiping
 slider.addEventListener("touchstart", (event) => {
@@ -40,3 +40,4 @@ slider.addEventListener("touchend", (event) => {
     slides[currentSlide].classList.add("active");
   }
 });
+
