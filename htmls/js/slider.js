@@ -27,7 +27,9 @@ setInterval(() => {
   slides[currentSlide].classList.add("active");
 
   
-
+  const progressBar = document.querySelector('.progress');
+  const progress = ((currentSlide + 1) / slides.length) * 100;
+  progressBar.style.width = `${progress}%`;
 
 }, 8000);
 
