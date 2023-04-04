@@ -7,8 +7,16 @@ let touchEndX = 0;
 // Set the first slide to be active
 slides[currentSlide].classList.add("active");
 
-// Create a timer to change the active slide every 5 seconds
+const progressBar = document.querySelector('.progress');
+const progress = ((currentSlide + 1) / slides.length) * 100;
+progressBar.style.width = `${progress}%`;
+
+
+
+// Create a timer to change the active slide every 8 seconds
 setInterval(() => {
+
+
   // Remove the active class from the current slide
   slides[currentSlide].classList.remove("active");
   
@@ -17,7 +25,13 @@ setInterval(() => {
   
   // Set the next slide to be active
   slides[currentSlide].classList.add("active");
+
+  
+
+
 }, 8000);
+
+
 
 // Add touch events to change slide when swiping
 slider.addEventListener("touchstart", (event) => {
@@ -33,11 +47,22 @@ slider.addEventListener("touchend", (event) => {
     slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add("active");
+
+    const progressBar = document.querySelector('.progress');
+    const progress = ((currentSlide + 1) / slides.length) * 100;
+    progressBar.style.width = `${progress}%`;
+
+
   } else if (touchEndX - touchStartX > 50) {
     // Swipe right, go to the previous slide
     slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + slides.length - 1) % slides.length;
     slides[currentSlide].classList.add("active");
+
+    const progressBar = document.querySelector('.progress');
+    const progress = ((currentSlide + 1) / slides.length) * 100;
+    progressBar.style.width = `${progress}%`;
+
   }
 });
 
