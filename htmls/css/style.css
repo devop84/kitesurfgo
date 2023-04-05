@@ -16,11 +16,9 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
-
 ul {
   list-style: none;
 }
-
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -28,7 +26,6 @@ ul {
   'GRAD' 0,
   'opsz' 48;
 }
-
 .top {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -107,7 +104,6 @@ ul {
   margin:0px 0px;
   background: rgba(255, 255, 255, 0.1);
 }
-
 .mobile-top-nav {
   display: none;
 }
@@ -133,7 +129,6 @@ ul {
     background: rgba(255, 255, 255, 0.1);
   }
 }
-
 .top-search-account {
   display: flex;
   justify-content: right;
@@ -151,23 +146,19 @@ ul {
   padding:6px;
   background: rgba(255, 255, 255, 0.1);
 }
-
-
 #slider {
   position: relative;
   height:400px;
   z-index: 999;
 }
-
 .slide {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   overflow: hidden;
 }
-
 .slide.active {
   opacity: 1;
 }
@@ -178,13 +169,20 @@ ul {
   height: 400px;
   object-fit: cover;
   filter: saturate(1.5);
+  animation-name: zoom-out;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+}
+@keyframes zoom-out{
+  from {scale: auto;}
+  to {scale: 2;}
 }
 .slide.active img {
-  animation-name: zoom-image;
+  animation-name: zoom-in;
   animation-delay: 1s;
   animation-duration: 8s;
 }
-@keyframes zoom-image {
+@keyframes zoom-in {
   from {scale: 1;}
   to {scale: 1.2;}
 }
@@ -208,7 +206,6 @@ ul {
   bottom: 40px;
 
 }
-
 .slide h3 {
   font-size: 15px;
   margin:0;
