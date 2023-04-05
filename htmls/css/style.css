@@ -206,6 +206,12 @@ ul {
 .caption-pos {
   position: absolute;
   bottom: 40px;
+  animation-name: slide-out;
+  animation-duration: 1s;
+}
+@keyframes slide-out {
+  from {left:10px;}
+  to {left:-100px;}
 }
 .slide h3 {
   font-size: 15px;
@@ -218,6 +224,14 @@ ul {
   margin:0;
   margin-bottom: 10px;
   padding:0;
+}
+.slide.active .caption-pos {
+  animation-name: slide-in;
+  animation-duration: 1s;
+}
+@keyframes slide-in {
+  from {left:100px;}
+  to {left:10px;}
 }
 a.btn {
   border-radius: 35px;
