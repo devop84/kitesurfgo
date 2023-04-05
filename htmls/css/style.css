@@ -206,32 +206,49 @@ ul {
 .caption-pos {
   position: absolute;
   bottom: 40px;
-  animation-name: slide-out;
-  animation-duration: 1s;
+
 }
-@keyframes slide-out {
-  from {left:10px;}
-  to {left:-100px;}
-}
+
 .slide h3 {
   font-size: 15px;
   margin:0;
   padding:0;
   text-transform: uppercase;
+  animation-name: slide-out;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
 }
 .slide h2 {
   font-size: larger;
   margin:0;
   margin-bottom: 10px;
   padding:0;
+  animation-name: slide-out;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
 }
-.slide.active .caption-pos {
+.slide.active h2 {
   animation-name: slide-in;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+}
+.slide.active h3 {
+  animation-name: slide-in;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+}
+.slide.active a {
+  animation-name: slide-in;
+  animation-delay: 0s;
   animation-duration: 1s;
 }
 @keyframes slide-in {
-  from {left:100px;}
-  to {left:10px;}
+  from {margin-left:100px;}
+  to {margin-left:0px;}
+}
+@keyframes slide-out {
+  from {margin-left:0px;}
+  to {margin-left:-100px;}
 }
 a.btn {
   border-radius: 35px;
@@ -241,6 +258,9 @@ a.btn {
   text-decoration: none;
   font-size: 12px;
   text-shadow: none;
+  animation-name: slide-out;
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
 .progress-bar {
   position: absolute;
