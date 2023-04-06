@@ -249,8 +249,14 @@ ul {
   }
 }
 @keyframes slide-out {
-  from {margin-left:0px;}
-  to {margin-left:-100px;}
+  from {
+    margin-left:0px;
+    opacity: 1;
+  }
+  to {
+    margin-left:-100px;
+    opacity: 0;
+  }
 }
 a.btn {
   border-radius: 35px;
