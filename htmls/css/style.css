@@ -204,7 +204,6 @@ ul {
 .caption-pos {
   position: absolute;
   bottom: 40px;
-
 }
 .slide h3 {
   font-size: 15px;
@@ -212,6 +211,11 @@ ul {
   padding:0;
   text-transform: uppercase;
   animation-name: slide-out;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+}
+.slide.active h3 {
+  animation-name: slide-in;
   animation-delay: 0.4s;
   animation-duration: 1s;
 }
@@ -229,19 +233,20 @@ ul {
   animation-delay: 0.2s;
   animation-duration: 1s;
 }
-.slide.active h3 {
-  animation-name: slide-in;
-  animation-delay: 0.4s;
-  animation-duration: 1s;
-}
 .slide.active a {
   animation-name: slide-in;
   animation-delay: 0s;
   animation-duration: 1s;
 }
 @keyframes slide-in {
-  from {margin-left:100px;}
-  to {margin-left:0px;}
+  from {
+    margin-left:100px;
+    opacity: 0;
+  }
+  to {
+    margin-left:0px;
+    opacity: 1;
+  }
 }
 @keyframes slide-out {
   from {margin-left:0px;}
