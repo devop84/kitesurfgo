@@ -9,12 +9,9 @@ let touchEndX = 0;
 slides[currentSlide].classList.add("active");
 
 const progressBar = document.querySelector(".progress");
-const progress = ((currentSlide + 1) / slides.length) * 100;
-progressBar.style.width = `${progress}%`;
+updateProgressBar();
 
-let intervalId = setInterval(() => {
-  changeSlide();
-}, 8000);
+let intervalId = setInterval(changeSlide, 8000);
 
 function changeSlide() {
   // Remove the active class from the current slide
@@ -26,7 +23,10 @@ function changeSlide() {
   // Set the next slide to be active
   slides[currentSlide].classList.add("active");
 
-  const progressBar = document.querySelector(".progress");
+  updateProgressBar();
+}
+
+function updateProgressBar() {
   const progress = ((currentSlide + 1) / slides.length) * 100;
   progressBar.style.width = `${progress}%`;
 }
@@ -43,26 +43,17 @@ slider.addEventListener("touchend", (event) => {
   // Determine the direction of the swipe
   if (touchStartX - touchEndX > 50) {
     // Swipe left, go to the next slide
-    slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add("active");
-
-    const progressBar = document.querySelector(".progress");
-    const progress = ((currentSlide + 1) / slides.length) * 100;
-    progressBar.style.width = `${progress}%`;
   } else if (touchEndX - touchStartX > 50) {
     // Swipe right, go to the previous slide
-    slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + slides.length - 1) % slides.length;
-    slides[currentSlide].classList.add("active");
-
-    const progressBar = document.querySelector(".progress");
-    const progress = ((currentSlide + 1) / slides.length) * 100;
-    progressBar.style.width = `${progress}%`;
   }
 
+  // Set the new active slide and update progress bar
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[currentSlide].classList.add("active");
+  updateProgressBar();
+
   // Start a new interval after the slide has been changed
-  intervalId = setInterval(() => {
-    changeSlide();
-  }, 8000);
+  intervalId = setInterval(changeSlide, 8000);
 });
