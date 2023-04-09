@@ -293,7 +293,7 @@ ul {
 
 
 section.main {
-  margin: 60px;
+  margin: 0px 60px 60px 60px;
 }
 .main h1 {
   font-size: xx-large;
