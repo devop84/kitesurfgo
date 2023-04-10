@@ -26,6 +26,113 @@ ul {
   'opsz' 48;
 }
 .top {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background: rgba(0,22,43);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 70px;
+  /* justify-content: space-around; */
+}
+.top a, .top ul, .top div {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  
+}
+.top .logo {
+  justify-content: baseline;
+  margin-left:20px;
+}
+.top .logo img {
+  height:60px;
+  width: 60px;
+  margin-left: 10px;
+}
+.top .top-search-account {
+  justify-content: end;
+  gap: 10px;
+  margin-right: 20px;
+}
+.top-search-account a {
+  border-radius: 18px;
+  margin:6px;
+  padding:0px;
+  transition:0.2s;
+}
+.top-search-account a:hover {
+  margin:0px;
+  padding:6px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.logo .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.logo .material-symbols-outlined:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.logo i {
+  border: thin solid rgba(255, 255, 255, 0.3);;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px;
+}
+
+@media all and (min-width: 900px) {
+  .top-nav ul {
+    padding: 0px 20px;
+    height:36px;
+    border: thin solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .top-nav a {
+    border-radius: 18px;
+    height:0px;
+    margin:0px 20px;
+    transition: 0.2s;
+    color: #fff;
+  }
+  .top-nav a:hover {
+    height:36px;
+    padding:0px 20px;
+    margin:0px 0px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+@media all and (max-width: 900px) {
+  .top-nav, .top-nav ul {
+    position: absolute;
+    width: 100%;
+    background-color: #DB0A40;
+  }
+  #nav-list {
+    display: block;
+  }
+  #navlist.show {
+    display: block;
+    background-color: #333;
+  }
+  .top-nav ul {
+    top:70px;
+  }
+}
+
+/* .top {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
   display: grid;
   grid-template-columns: auto auto auto;
   height: 70px;
@@ -106,6 +213,7 @@ ul {
 }
 .mobile-top-nav {
   display: none;
+  width: 100%;
 }
 @media all and (max-width: 900px) {
   .top-nav {
@@ -114,6 +222,7 @@ ul {
   .mobile-top-nav {
     display: none;
     background-color: rgba(0,22,43);
+    width: 100%;
   }
   .showmenu {
     display: block;
@@ -125,7 +234,8 @@ ul {
     height: 50px;
     text-decoration: none;
     color: #fff;
-  }
+    
+    }
   .mobile-top-nav a:hover {
     background: rgba(255, 255, 255, 0.1);
   }
@@ -146,7 +256,7 @@ ul {
   margin:0px;
   padding:6px;
   background: rgba(255, 255, 255, 0.1);
-}
+} */
 #slider {
   position: relative;
   height:70vh;
