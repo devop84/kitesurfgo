@@ -199,7 +199,7 @@ ul {
   text-align: left;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
   pointer-events: none;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
+  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 100%);
   line-height: 1.7;
 }
 .caption-pos {
@@ -292,9 +292,7 @@ ul {
 
 
 
-section.main {
-  margin: 0px;
-}
+
 .main h1 {
   font-size: xx-large;
   margin:30px 0px 30px 0px;
@@ -304,6 +302,11 @@ section.main {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px,1fr));
   gap:30px;
+  
+}
+section.main {
+  margin: 40px;
+  
 }
 @media all and (max-width: 1000px) {
   .grid {
@@ -323,7 +326,7 @@ section.main {
   }
 }
 .card {
-  max-width: 24rem;
+  max-width: 600px;
   aspect-ratio: 3/4;
   border-radius: 10px;
   overflow: hidden;
@@ -332,7 +335,7 @@ section.main {
   color: rgb(240, 240, 240);
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
 }
- 
+
 .card img {
     position: absolute;
     object-fit: cover;
@@ -340,7 +343,21 @@ section.main {
     height: 100%;
     top: 0;
     left: 0;
+    
   }
 .card-content {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    padding:10px;
+    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 100%);
+}
+.card-content h1 {
+  position: absolute;
+  bottom: 0;
+}
+.card-content p {
+  position: absolute;
+  bottom: 0;
 }
