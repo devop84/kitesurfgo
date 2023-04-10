@@ -150,7 +150,7 @@ ul {
 
 #slider {
   position: relative;
-  height:90vh;
+  height:80vh;
   line-height: 0;
 }
 .slide {
@@ -166,7 +166,7 @@ ul {
   opacity: 1;
 }
 .slide img {
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   object-fit: cover;
   filter: saturate(1.5);
