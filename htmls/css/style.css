@@ -199,7 +199,7 @@ ul {
   text-align: left;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
   pointer-events: none;
-  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0)50%, rgba(0,0,0,0.3) 100%);
   line-height: 1.7;
 }
 .caption-pos {
@@ -351,13 +351,9 @@ section.main {
     height: 100%;
     bottom: 0px;
     padding:10px;
-    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
+    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 100%);
 }
-.card-content h1 {
-  position: absolute;
-  bottom: 0;
-}
-.card-content p {
+.card-content-text{
   position: absolute;
   bottom: 0;
 }
