@@ -33,13 +33,9 @@ ul {
   grid-template-columns: auto auto auto;
   height: 70px;
 }
-#top-bgchange {
-  background: none;
-  transition: 0.5s;
-}
-#top-bgchange.showbg {
-  background: rgba(0,22,43);
-}
+
+  /* background: rgba(0,22,43); */
+
 .top a, .top ul, .top div {
   display: flex;
   align-items: center;
@@ -96,6 +92,9 @@ ul {
   padding: 5px;
 }
 
+
+
+
 @media all and (min-width: 900px) {
   .top-nav ul {
     padding: 0px 20px;
@@ -123,30 +122,41 @@ ul {
 @media all and (max-width: 900px) {
   .top {
     grid-template-columns: auto auto;
+    background: rgba(0, 28, 57, 0);
   }
-  .top-nav, .top-nav ul {
+  .display-bg {
+    background: rgba(0, 28, 57, 1);
+  }
+  .top-nav {
     position: absolute;
+    background: rgba(0, 28, 57, 0);
+    top:70px;
     width: 100%;
-  }
-  #nav-list {
-    display: none;
-    background: none;
     transition: 0.5s;
   }
-  #nav-list.show {
+  #top-nav.display-block {
     display: block;
-    background: rgba(0,22,43);
   }
-  .top-nav ul {
-    top:70px;
+  #top-nav {
+    display: none;
+    width: 100%;
   }
-  .top-nav a {
+  .top-nav li, .top-nav a {
     height:70px;
     width: 100%;
     justify-content: center;
   }
-
 }
+
+
+
+
+
+
+
+
+
+
 
 #slider {
   position: relative;
