@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+.fullscreen {
+    position: absolute;
+    background: rgb(0, 28, 57);
+    height: 100%;
+    width: 100%;
+}
+.fullscreen, .fullscreen a {
+    color: white;
+    text-decoration: none;
+}
+.fullscreen ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    list-style: none;
+}
+.fullscreen a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+    aspect-ratio: 1;
+}
+.fullscreen h2 {
+    font-size: 12px;
+}
