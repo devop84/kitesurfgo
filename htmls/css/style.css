@@ -118,6 +118,7 @@ ul {
   .top .nav {
     display: none;
   }
+
 }
 
 #fullscreen {
@@ -136,6 +137,14 @@ ul {
 }
 #closemenu {
   display: none;
+}
+#showmenu {
+  display: none;
+}
+@media all and (max-width: 900px) {
+#showmenu {
+  display: block;
+}
 }
 #showmenu.display {
   display: none;
