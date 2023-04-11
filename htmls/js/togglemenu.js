@@ -8,6 +8,19 @@ menuToggle.addEventListener('click', () => {
   topSection.classList.toggle('display-bg');
 });
 
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+  const height = (window.innerHeight * 0.8);
+
+  console.log(currentScrollPos);
+
+  if (currentScrollPos >= height) {
+    topSection.classList.add('display-bg');
+  }else{
+    topSection.classList.remove('display-bg');
+  }
+};
+
 // let prevScrollpos = window.pageYOffset;
 // let isScrollingUp;
 // window.onscroll = function() {
