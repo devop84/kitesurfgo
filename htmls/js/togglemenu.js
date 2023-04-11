@@ -9,6 +9,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 window.onscroll = function() {
+  
   const currentScrollPos = window.pageYOffset;
   const height = (window.innerHeight * 0.8);
 
@@ -16,7 +17,8 @@ window.onscroll = function() {
 
   if (currentScrollPos >= height) {
     topSection.classList.add('display-bg');
-  }else{
+  }
+  else {
     topSection.classList.remove('display-bg');
   }
 };
