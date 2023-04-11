@@ -3,10 +3,14 @@ const closemenu = document.getElementById('closemenu');
 const fullscreen = document.getElementById('fullscreen');
 
 showmenu.addEventListener('click', () => {
-  fullscreen.classList.add('display');
+  fullscreen.classList.add('expand');
+  closemenu.classList.add('display');
+  showmenu.classList.add('display');
 });
 closemenu.addEventListener('click', () => {
-  fullscreen.classList.remove('display');
+  fullscreen.classList.remove('expand');
+  closemenu.classList.remove('display');
+  showmenu.classList.remove('display');
 });
 
 
