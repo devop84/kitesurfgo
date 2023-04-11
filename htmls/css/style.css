@@ -134,6 +134,9 @@ ul {
   height: 100%;
   background: rgb(0, 28, 57);
 }
+.top-hide {
+  top:-70px;
+}
 .display-bg {
   background: rgb(0, 28, 57);
 }

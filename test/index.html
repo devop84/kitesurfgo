@@ -1,28 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<div id="myDiv" style="height: 100px; background-color: red;"></div>
 
-    <title>Document</title>
-</head>
-<body>
+<script>
+  let startY = 0;
+  let endY = 0;
+  let direction = '';
+  const threshold = 50; // minimum distance required for swipe to be registered
+  
+  const myDiv = document.getElementById('myDiv');
+  
+  document.addEventListener('touchstart', (e) => {
+    startY = e.touches[0].clientY;
+  });
+  
+  document.addEventListener('touchmove', (e) => {
+    endY = e.touches[0].clientY;
+    direction = endY - startY > 0 ? 'down' : 'up';
+  });
+  
+  document.addEventListener('touchend', (e) => {
+    const distance = Math.abs(startY - endY);
     
-
-    <div class="fullscreen">
-        <ul>
-            <a href="#"><li><i class="material-symbols-outlined" style="font-weight:200; font-size: 60px;">explore</i><h2>Explore</h2></li></a>
-            <a href="#"><li><i class="material-symbols-outlined" style="font-weight:200; font-size: 60px;">kitesurfing</i><h2>Our Style</h2></li></a>
-            <a href="#"><li><i class="material-symbols-outlined" style="font-weight:200; font-size: 60px;">group</i><h2>Our Team</h2></li></a>
-            <a href="#"><li><i class="material-symbols-outlined" style="font-weight:200; font-size: 60px;">mail</i><h2>Contact</h2></li></a>
-        </ul>
-      </div>
-    
-
-
-
-</body>
-</html>
+    if (direction === 'up' && distance > threshold) {
+      myDiv.style.display = 'none';
+    } else if (direction === 'down' && distance > threshold) {
+      myDiv.style.display = 'block';
+    }
+  });
+</script>

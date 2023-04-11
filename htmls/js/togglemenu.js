@@ -29,15 +29,31 @@ window.onscroll = function() {
   }
 };
 
-// let prevScrollpos = window.pageYOffset;
-// let isScrollingUp;
-// window.onscroll = function() {
-//   const currentScrollPos = window.pageYOffset;
-//   isScrollingUp = prevScrollpos > currentScrollPos;
-//   if (isScrollingUp) {
-//     topbgchange.classList.add('top-hide');
-//   } else {
-//     topbgchange.classList.remove('top-hide');
-//   }
-//   prevScrollpos = currentScrollPos;
-// };
+
+
+
+let startY = 0;
+let endY = 0;
+let direction = '';
+const threshold = 50; // minimum distance required for swipe to be registered
+
+// const myDiv = document.getElementById('myDiv');
+
+document.addEventListener('touchstart', (e) => {
+  startY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchmove', (e) => {
+  endY = e.touches[0].clientY;
+  direction = endY - startY > 0 ? 'down' : 'up';
+});
+
+document.addEventListener('touchend', (e) => {
+  const distance = Math.abs(startY - endY);
+  
+  if (direction === 'up' && distance > threshold) {
+    fullscreen.style.top = '-70px';
+  } else if (direction === 'down' && distance > threshold) {
+    fullscreen.style.top = '0px';
+  }
+});
