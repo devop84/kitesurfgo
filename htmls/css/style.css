@@ -120,7 +120,6 @@ ul {
   }
 
 }
-
 #fullscreen {
   display: block;
   position:fixed;
@@ -133,6 +132,9 @@ ul {
 }
 #fullscreen.expand {
   height: 100%;
+  background: rgb(0, 28, 57);
+}
+.display-bg {
   background: rgb(0, 28, 57);
 }
 #closemenu {

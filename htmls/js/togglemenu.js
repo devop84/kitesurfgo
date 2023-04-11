@@ -14,26 +14,20 @@ closemenu.addEventListener('click', () => {
 });
 
 
-// window.onscroll = function() {
+window.onscroll = function() {
   
-//   const currentScrollPos = window.pageYOffset;
-//   const height = (window.innerHeight * 0.8);
+  const currentScrollPos = window.pageYOffset;
+  const height = (window.innerHeight * 0.8);
 
-//   console.log(currentScrollPos);
+  console.log(currentScrollPos);
 
-//   if (currentScrollPos >= height) {
-//     topSection.classList.add('display-bg');
-
-
-
-//   }
-//   else {
-//     topSection.classList.remove('display-bg');
-
-
-
-//   }
-// };
+  if (currentScrollPos >= height) {
+    fullscreen.classList.add('display-bg');
+  }
+  else {
+    fullscreen.classList.remove('display-bg');
+  }
+};
 
 // let prevScrollpos = window.pageYOffset;
 // let isScrollingUp;
