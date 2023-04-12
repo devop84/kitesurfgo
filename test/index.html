@@ -1,29 +1,26 @@
-<div id="myDiv" style="height: 100px; background-color: red;"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
 
-<script>
-  let startY = 0;
-  let endY = 0;
-  let direction = '';
-  const threshold = 50; // minimum distance required for swipe to be registered
-  
-  const myDiv = document.getElementById('myDiv');
-  
-  document.addEventListener('touchstart', (e) => {
-    startY = e.touches[0].clientY;
-  });
-  
-  document.addEventListener('touchmove', (e) => {
-    endY = e.touches[0].clientY;
-    direction = endY - startY > 0 ? 'down' : 'up';
-  });
-  
-  document.addEventListener('touchend', (e) => {
-    const distance = Math.abs(startY - endY);
-    
-    if (direction === 'up' && distance > threshold) {
-      myDiv.style.display = 'none';
-    } else if (direction === 'down' && distance > threshold) {
-      myDiv.style.display = 'block';
-    }
-  });
-</script>
+  <div class="card">
+    <img src="images/1.jpg" />
+    <div class="card-content">
+      <div class="card-content-text">
+        <h1>title this is an exemlple of a long title</h1>
+        <p>26/03/2023 12:43</p>
+        <a href="#">More</a>
+      </div>
+    </div> 
+  </div>
+
+
+</body>
+</html>
