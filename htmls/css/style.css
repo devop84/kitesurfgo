@@ -133,7 +133,7 @@ ul {
   transition: 0.5s;
 }
 #fullscreen.expand {
-  height: 100%;
+  height: calc(100% + 70px);
   background: rgb(0, 28, 57);
 }
 .top-hide {

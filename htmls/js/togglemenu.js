@@ -12,8 +12,6 @@ closemenu.addEventListener('click', () => {
   closemenu.classList.remove('display');
   showmenu.classList.remove('display');
 });
-
-
 window.onscroll = function() {
   
   const currentScrollPos = window.pageYOffset;
@@ -28,10 +26,6 @@ window.onscroll = function() {
     fullscreen.classList.remove('display-bg');
   }
 };
-
-
-
-
 let startY = 0;
 let endY = 0;
 let direction = '';
